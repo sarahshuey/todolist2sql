@@ -13,5 +13,5 @@ insert into todo2 (title, priority, details, created_at) values ('ho',1,'no jo b
 
 SELECT id,title,priority from todo2 WHERE priority = 3 and completed_at is null;
 SELECT title, completed_at, priority from todo2 WHERE completed_at is null Order by priority;
-SELECT id,title,priority from todo2 WHERE created_at < current_date - 30 order by priority;
+SELECT id,title,priority from todo2 WHERE created_at > (current_date - 30) order by priority;
 SELECT id,title,details,priority from todo2 WHERE priority = 1 and completed_at is null order by created_at limit 1;
